@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions'
+import * as actionTypes from '../actions/actions'
 
 const initialState = {
     results: []
@@ -10,6 +10,9 @@ const reducer = (state = initialState, action) => {
 
         //value: state.counter doesn't work any more
         return {...state, results: state.results.concat({id: new Date(), value: action.result})}
+
+
+        
         case actionTypes.DELETE_RESULT: 
         // One way of removing data from array immutably
         // const id = 2
