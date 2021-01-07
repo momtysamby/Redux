@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/actions'
+import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
     results: []
@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
         return {...state, results: state.results.concat({id: new Date(), value: action.result})}
 
 
-        
+
         case actionTypes.DELETE_RESULT: 
         // One way of removing data from array immutably
         // const id = 2
